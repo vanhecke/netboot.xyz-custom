@@ -8,7 +8,7 @@ clear custom_choice
 menu The Menu
 item --gap Load g4u
 item option_one ${space} Load g4u from ISO (HTTPS)
-item option_two ${space} Load g4u from ISO with mbirth memdisk (HTTP)
+item option_two ${space} Load g4u from ISO with mbirth memdisk from GH
 item option_four ${space} Loag g4u from ISO from Github
 item --gap This is a second sub menu
 item option_three ${space} Load main netboot.xyz
@@ -27,7 +27,7 @@ set base-url ${boot-url}g4u/
 #kernel ${base-url}netbsd
 #initrd ${base-url}miniroot.kmod
 kernel https://github.com/mbirth/ipxe-config/raw/master/memdisk iso raw
-initrd https://www.feyrer.de/g4u/g4u-2.6.iso
+initrd https://github.com/vanhecke/netboot.xyz-custom/raw/master/g4u-2.6.iso
 
 :option_four
 kernel https://boot.netboot.xyz/memdisk raw iso
