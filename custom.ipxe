@@ -11,6 +11,7 @@ item option_one ${space} Load g4u from ISO (HTTPS)
 item option_two ${space} Load g4u from ISO with mbirth memdisk from GH
 item option_four ${space} Load g4u from ISO from Github
 item option_five ${space} Load g4u 2.5 from ISO from Github
+item option_six ${space} Load g4u kernel directly
 item --gap This is a second sub menu
 item option_three ${space} Load main netboot.xyz
 choose custom_choice || goto custom_exit
@@ -40,6 +41,10 @@ kernel https://boot.netboot.xyz/memdisk raw iso
 initrd https://github.com/vanhecke/netboot.xyz-custom/raw/master/g4u-2.5.iso
 boot || goto custom_exit
 
+:option_six
+set base-url https://github.com/vanhecke/netboot.xyz-custom/raw/master/
+kernel ${base-url}netbsd
+initrd ${base-url}miniroot.kmod
 
 :option_three
 echo Chain into main netboot menu...
