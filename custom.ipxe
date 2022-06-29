@@ -45,6 +45,7 @@ boot || goto custom_exit
 set base-url https://github.com/vanhecke/netboot.xyz-custom/raw/master/
 kernel ${base-url}netbsd
 initrd ${base-url}miniroot.kmod
+boot || goto custom_exit
 
 :option_three
 echo Chain into main netboot menu...
