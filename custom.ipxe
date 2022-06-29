@@ -10,7 +10,7 @@ item --gap Load g4u
 item option_one ${space} Load g4u from ISO (HTTPS)
 item option_two ${space} Load g4u from ISO with mbirth memdisk from GH
 item option_four ${space} Load g4u from ISO from Github
-item option_four ${space} Load g4u 2.5 from ISO from Github
+item option_five ${space} Load g4u 2.5 from ISO from Github
 item --gap This is a second sub menu
 item option_three ${space} Load main netboot.xyz
 choose custom_choice || goto custom_exit
